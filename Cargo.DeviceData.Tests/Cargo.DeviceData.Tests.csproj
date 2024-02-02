@@ -10,6 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="DataConverts.Tests\**" />
+    <EmbeddedResource Remove="DataConverts.Tests\**" />
+    <None Remove="DataConverts.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
@@ -20,6 +26,21 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Files\" />
+    <Compile Remove="Files\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Temp\" />
+    <None Include="Temp\**" />
+    <Compile Remove="Temp\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Cargo.DeviceData\Cargo.DeviceData.csproj" />
   </ItemGroup>
 
 </Project>

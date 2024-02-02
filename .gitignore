@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# User added
+*.Tests/Temp/*
+
+# Make sure this is after all other user added
+!*.gitkeep
+
 # User-specific files
 *.rsuser
 *.suo
